@@ -1,22 +1,40 @@
 import { useState } from "react"
 
+
 export default function UseState() {
 
-    const [value, setValue] = useState("Yes")
-
-    console.log(useState)
+    const [value, setValue] = useState(0);
 
 
-    const handleClick = () => {
+    const addValue = () => {
 
-        setValue("Definitely")
+        setValue(value + 1)
+
+        console.log('Add')
+
+    }
+
+
+    const decreaseValue = () => {
+
+        setValue(value - 1)
+
+        console.log('Decrease')
 
     }
 
 
     return (
 
-        <h2 onClick={handleClick}> {value} </h2>
+        <div className="use_state">
+
+            <span onClick={decreaseValue}>⬅️</span>
+
+            <h2>{value}</h2>
+
+            <span onClick={addValue}>➡️</span>
+
+        </div>
 
     )
 

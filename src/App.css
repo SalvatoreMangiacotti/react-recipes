@@ -99,3 +99,36 @@ header {
     width: 20px;
 
 }
+
+
+/* UseState */
+
+.use_state {
+
+    background-color: skyblue;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 20%;
+
+    padding: 10px;
+
+    margin: 0 auto;
+
+}
+
+.use_state span {
+
+    cursor: pointer;
+
+    font-size: 35px;
+
+    margin: 10px;
+
+}
