@@ -6,6 +6,12 @@ export default function Main() {
 
     }
 
+    const handleMouseHover = () => {
+
+        console.log("Mouse hover")
+
+    }
+
     return (
 
         <main>
@@ -24,7 +30,10 @@ export default function Main() {
 
                     />
 
-                    <button onClick={handleClick}>
+                    <button
+                        onClick={handleClick}
+                        onMouseEnter={handleMouseHover}
+                    >
 
                         <img src="./src/assets/plus-solid.svg" />
 
