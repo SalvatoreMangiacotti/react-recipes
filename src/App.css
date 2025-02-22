@@ -9,16 +9,24 @@
 }
 
 
+body {
+
+    font-family: "Noto Sans Mono", serif;
+
+}
+
 h1 {
 
     color: lightgray;
 
+    font-size: 2rem;
+
 }
 
 
-body {
+ol {
 
-    font-family: "Noto Sans Mono", serif;
+    margin: 3rem;
 
 }
 
@@ -47,9 +55,9 @@ header {
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
+
+    align-items: center;
 
     gap: 1rem;
 
@@ -65,8 +73,6 @@ header {
     background-color: #f8f8f8;
 
     border-radius: 15px;
-
-    width: 50%;
 
 }
 

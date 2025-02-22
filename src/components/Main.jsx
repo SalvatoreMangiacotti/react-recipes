@@ -1,3 +1,5 @@
+import products from "../data/productList"
+
 export default function Main() {
 
     const handleClick = () => {
@@ -6,11 +8,33 @@ export default function Main() {
 
     }
 
-    const handleMouseHover = () => {
 
-        console.log("Mouse hover")
+    // const handleMouseHover = () => {
+
+    //     console.log("Mouse hover")
+
+    // }
+
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
+
+        console.log("Submitted")
 
     }
+
+
+    const productsList = products.map((element) => {
+
+        return (
+
+            <li key={element}>{element}</li>
+
+        )
+
+    })
+
 
     return (
 
@@ -18,7 +42,7 @@ export default function Main() {
 
             <div className="main_container">
 
-                <form className="add_ingredient_form">
+                <form className="add_ingredient_form" onSubmit={handleSubmit}>
 
                     <input
 
@@ -31,8 +55,11 @@ export default function Main() {
                     />
 
                     <button
+
                         onClick={handleClick}
-                        onMouseEnter={handleMouseHover}
+
+                    // onMouseEnter={handleMouseHover}
+
                     >
 
                         <img src="./src/assets/plus-solid.svg" />
@@ -40,6 +67,12 @@ export default function Main() {
                     </button>
 
                 </form>
+
+                <ol>
+
+                    {productsList}
+
+                </ol>
 
             </div>
 
