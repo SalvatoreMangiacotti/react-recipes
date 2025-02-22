@@ -1,0 +1,95 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+h1 {
+
+    color: lightgray;
+
+}
+
+
+body {
+
+    font-family: "Noto Sans Mono", serif;
+
+}
+
+
+/* Header */
+
+header {
+
+    text-align: center;
+
+    padding: 1rem;
+
+}
+
+
+.logo {
+
+    font-size: 3rem;
+
+}
+
+
+/* Main */
+
+.add_ingredient_form {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+
+.add_ingredient_form input {
+
+    padding: 1rem;
+
+    border: none;
+
+    background-color: #f8f8f8;
+
+    border-radius: 15px;
+
+    width: 50%;
+
+}
+
+
+.add_ingredient_form button {
+
+    background-color: #72ccec;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    display: flex;
+
+    cursor: pointer;
+
+}
+
+
+.add_ingredient_form button img {
+
+    width: 20px;
+
+}
