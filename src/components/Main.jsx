@@ -1,5 +1,11 @@
 export default function Main() {
 
+    const handleClick = () => {
+
+        console.log("Clicked")
+
+    }
+
     return (
 
         <main>
@@ -18,8 +24,10 @@ export default function Main() {
 
                     />
 
-                    <button>
+                    <button onClick={handleClick}>
+
                         <img src="./src/assets/plus-solid.svg" />
+
                     </button>
 
                 </form>
