@@ -6,20 +6,38 @@ export default function UseState() {
     const [value, setValue] = useState(0);
 
 
+    // const addValue = () => {
+
+    //     setValue(value + 1)
+
+    //     console.log('Add')
+
+    // }
+
+
+    // const decreaseValue = () => {
+
+    //     setValue(value - 1)
+
+    //     console.log('Decrease')
+
+    // }
+
+
+    // addValue callback function 
+
     const addValue = () => {
 
-        setValue(value + 1)
-
-        console.log('Add')
+        setValue(value => value + 1)
 
     }
 
 
+    // decreaseValue callback function 
+
     const decreaseValue = () => {
 
-        setValue(value - 1)
-
-        console.log('Decrease')
+        setValue(value => value - 1)
 
     }
 
