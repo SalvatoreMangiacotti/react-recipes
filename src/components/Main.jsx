@@ -2,11 +2,11 @@ import products from "../data/productList"
 
 export default function Main() {
 
-    const handleClick = () => {
+    // const handleClick = () => {
 
-        console.log("Clicked")
+    //     console.log("Clicked")
 
-    }
+    // }
 
 
     // const handleMouseHover = () => {
@@ -20,7 +20,10 @@ export default function Main() {
 
         event.preventDefault();
 
-        console.log("Submitted")
+        const formData = new FormData(event.currentTarget)
+        const newIngredient = formData.get("ingredient")
+        products.push(newIngredient)
+        console.log(products)
 
     }
 
@@ -42,7 +45,7 @@ export default function Main() {
 
             <div className="main_container">
 
-                <form className="add_ingredient_form" onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="add_ingredient_form">
 
                     <input
 
@@ -52,11 +55,13 @@ export default function Main() {
 
                         aria-label="Add ingredient"
 
+                        name="ingredient"
+
                     />
 
                     <button
 
-                        onClick={handleClick}
+                    // onClick={handleClick}
 
                     // onMouseEnter={handleMouseHover}
 
