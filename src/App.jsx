@@ -8,6 +8,11 @@ import Header from './components/Header'
 import Main from './components/Main'
 
 
+// UseState Practice
+
+import UseState from './components/UseState'
+
+
 // Css
 
 import './App.css'
@@ -22,6 +27,8 @@ function App() {
       <Header />
 
       <Main />
+
+      <UseState />
 
     </>
 

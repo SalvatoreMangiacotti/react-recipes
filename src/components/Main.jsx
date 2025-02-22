@@ -21,8 +21,11 @@ export default function Main() {
         event.preventDefault();
 
         const formData = new FormData(event.currentTarget)
+
         const newIngredient = formData.get("ingredient")
+
         products.push(newIngredient)
+
         console.log(products)
 
     }
