@@ -19,10 +19,9 @@ export default function UseState() {
 
     // }
 
-
     const [value, setValue] = useState(0);
 
-    const [valueTwo, setValueTwo] = useState(false);
+    const [valueTwo, setValueTwo] = useState('🌻');
 
 
     // callback function 
@@ -47,9 +46,7 @@ export default function UseState() {
 
     const toggleState = () => {
 
-        setValueTwo(prevValueTwo => !prevValueTwo)
-
-        console.log(valueTwo)
+        setValueTwo(prevValueTwo => prevValueTwo === '🌻' ? '🍉' : '🌻')
 
     }
 
@@ -70,7 +67,7 @@ export default function UseState() {
 
             <div className="use_state_two">
 
-                <h2>{valueTwo ? '🌻' : '🍉'}</h2>
+                <h2>{valueTwo}</h2>
 
                 <span onClick={toggleState}>✅</span>
 
