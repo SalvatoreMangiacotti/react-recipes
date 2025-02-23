@@ -1,10 +1,6 @@
 import { useState } from "react"
 
-
 export default function UseState() {
-
-    const [value, setValue] = useState(0);
-
 
     // const addValue = () => {
 
@@ -24,7 +20,19 @@ export default function UseState() {
     // }
 
 
-    // addValue callback function 
+    const fruitsArray = ['🥝', '🍉', '🍈', '🍍'];
+
+    const plantsArray = ['🌻', '🪴', '🌵', '🌴'];
+
+
+    const [value, setValue] = useState(0);
+
+    const [valueTwo, setValueTwo] = useState(fruitsArray);
+
+    const [plant, setPlant] = useState('🌱')
+
+
+    // callback function 
 
     const addValue = () => {
 
@@ -33,7 +41,7 @@ export default function UseState() {
     }
 
 
-    // decreaseValue callback function 
+    // callback function 
 
     const decreaseValue = () => {
 
@@ -42,17 +50,40 @@ export default function UseState() {
     }
 
 
+    // callback function 
+
+    const showPlants = () => {
+
+        setValueTwo(() => plantsArray);
+
+        setPlant(() => '🍋‍🟩');
+
+    }
+
+
     return (
 
-        <div className="use_state">
+        <>
 
-            <span onClick={decreaseValue}>⬅️</span>
+            <div className="use_state">
 
-            <h2>{value}</h2>
+                <span onClick={decreaseValue}>⬅️</span>
 
-            <span onClick={addValue}>➡️</span>
+                <h2>{value}</h2>
 
-        </div>
+                <span onClick={addValue}>➡️</span>
+
+            </div>
+
+            <div className="use_state_two">
+
+                <h2>{valueTwo}</h2>
+
+                <span onClick={showPlants}>{plant}</span>
+
+            </div>
+
+        </>
 
     )
 
