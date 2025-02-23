@@ -19,6 +19,15 @@ export default function Main() {
 
     const [ingredients, setIngredients] = useState(products)
 
+    const [newIngredient, setNewIngredient] = useState('')
+
+
+    const handleInputChange = (e) => {
+
+        setNewIngredient(e.target.value)
+
+    }
+
 
     const handleSubmit = (event) => {
 
@@ -26,8 +35,9 @@ export default function Main() {
 
         setIngredients(prevValue => [...prevValue, newIngredient])
 
-        const formData = new FormData(event.currentTarget)
-        const newIngredient = formData.get("ingredient")
+        // Reset input value
+
+        setNewIngredient('');
 
     }
 
@@ -50,6 +60,8 @@ export default function Main() {
 
                         name="ingredient"
 
+                        onChange={handleInputChange}
+
                     />
 
                     <button
@@ -68,11 +80,11 @@ export default function Main() {
 
                 <ol>
 
-                    {ingredients.map((element) => {
+                    {ingredients.map((element, index) => {
 
                         return (
 
-                            <li key={element}>{element}</li>
+                            <li key={index}>{element}</li>
 
                         )
 
