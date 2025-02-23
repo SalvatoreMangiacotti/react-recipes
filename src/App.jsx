@@ -13,6 +13,11 @@ import Main from './components/Main'
 // import UseState from './components/UseState'
 
 
+// ManageArrays Practice
+
+import ManageArrays from './components/ManageArrays'
+
+
 // Css
 
 import './App.css'
@@ -29,6 +34,8 @@ function App() {
       <Main />
 
       {/* <UseState /> */}
+
+      <ManageArrays />
 
     </>
 
