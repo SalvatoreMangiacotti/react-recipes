@@ -15,7 +15,7 @@ import Main from './components/Main'
 
 // ManageArrays Practice
 
-import ManageArrays from './components/ManageArrays'
+// import ManageArrays from './components/ManageArrays'
 
 
 // Css
@@ -35,7 +35,7 @@ function App() {
 
       {/* <UseState /> */}
 
-      <ManageArrays />
+      {/* <ManageArrays /> */}
 
     </>
 

@@ -1,45 +1,45 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export default function ManageArrays() {
+// export default function ManageArrays() {
 
-    const animals = ['🦥', '🐘', '🐊', '🐳', '🐆', '🦜']
+//     const animals = ['🦥', '🐘', '🐊', '🐳', '🐆', '🦜']
 
-    const [emptyArray, setEmptyArray] = useState(animals)
-
-
-    function addAnimals() {
-
-        setEmptyArray(prevValue => [...prevValue, "Test"])
-
-    }
+//     const [emptyArray, setEmptyArray] = useState(animals)
 
 
-    return (
+//     function addAnimals() {
 
-        <>
+//         setEmptyArray(prevValue => [...prevValue, "Test"])
 
-            <button onClick={addAnimals}>Add item</button>
+//     }
 
-            <section>
 
-                <ul>
+//     return (
 
-                    {
+//         <>
 
-                        emptyArray.map((element, index) => (
+//             <button onClick={addAnimals}>Add item</button>
 
-                            <li key={index}>{element}</li>
+//             <section>
 
-                        ))
+//                 <ul>
 
-                    }
+//                     {
 
-                </ul>
+//                         emptyArray.map((element, index) => (
 
-            </section>
+//                             <li key={index}>{element}</li>
 
-        </>
+//                         ))
 
-    )
+//                     }
 
-}
+//                 </ul>
+
+//             </section>
+
+//         </>
+
+//     )
+
+// }
