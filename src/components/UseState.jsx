@@ -20,16 +20,9 @@ export default function UseState() {
     // }
 
 
-    const fruitsArray = ['🥝', '🍉', '🍈', '🍍'];
-
-    const plantsArray = ['🌻', '🪴', '🌵', '🌴'];
-
-
     const [value, setValue] = useState(0);
 
-    const [valueTwo, setValueTwo] = useState(fruitsArray);
-
-    const [plant, setPlant] = useState('🌱')
+    const [valueTwo, setValueTwo] = useState('🍉');
 
 
     // callback function 
@@ -50,13 +43,11 @@ export default function UseState() {
     }
 
 
-    // callback function 
+    // ternary operator 
 
-    const showPlants = () => {
+    const toggleState = () => {
 
-        setValueTwo(() => plantsArray);
-
-        setPlant(() => '🍋‍🟩');
+        setValueTwo(prevValueTwo => prevValueTwo === '🍉' ? '🌻' : '🍉')
 
     }
 
@@ -79,7 +70,7 @@ export default function UseState() {
 
                 <h2>{valueTwo}</h2>
 
-                <span onClick={showPlants}>{plant}</span>
+                <span onClick={toggleState}>✅</span>
 
             </div>
 
