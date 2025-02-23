@@ -1,80 +1,80 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export default function UseState() {
+// export default function UseState() {
 
-    // const addValue = () => {
+//     // const addValue = () => {
 
-    //     setValue(value + 1)
+//     //     setValue(value + 1)
 
-    //     console.log('Add')
+//     //     console.log('Add')
 
-    // }
-
-
-    // const decreaseValue = () => {
-
-    //     setValue(value - 1)
-
-    //     console.log('Decrease')
-
-    // }
-
-    const [value, setValue] = useState(0);
-
-    const [valueTwo, setValueTwo] = useState('🌻');
+//     // }
 
 
-    // callback function 
+//     // const decreaseValue = () => {
 
-    const addValue = () => {
+//     //     setValue(value - 1)
 
-        setValue(value => value + 1)
+//     //     console.log('Decrease')
 
-    }
+//     // }
 
+//     const [value, setValue] = useState(0);
 
-    // callback function 
-
-    const decreaseValue = () => {
-
-        setValue(value => value - 1)
-
-    }
+//     const [valueTwo, setValueTwo] = useState('🌻');
 
 
-    // ternary operator 
+//     // callback function
 
-    const toggleState = () => {
+//     const addValue = () => {
 
-        setValueTwo(prevValueTwo => prevValueTwo === '🌻' ? '🍉' : '🌻')
+//         setValue(value => value + 1)
 
-    }
+//     }
 
 
-    return (
+//     // callback function
 
-        <>
+//     const decreaseValue = () => {
 
-            <div className="use_state">
+//         setValue(value => value - 1)
 
-                <span onClick={decreaseValue}>⬅️</span>
+//     }
 
-                <h2>{value}</h2>
 
-                <span onClick={addValue}>➡️</span>
+//     // ternary operator
 
-            </div>
+//     const toggleState = () => {
 
-            <div className="use_state_two">
+//         setValueTwo(prevValueTwo => prevValueTwo === '🌻' ? '🍉' : '🌻')
 
-                <h2>{valueTwo}</h2>
+//     }
 
-                <span onClick={toggleState}>✅</span>
 
-            </div>
+//     return (
 
-        </>
+//         <>
 
-    )
+//             <div className="use_state">
 
-}
+//                 <span onClick={decreaseValue}>⬅️</span>
+
+//                 <h2>{value}</h2>
+
+//                 <span onClick={addValue}>➡️</span>
+
+//             </div>
+
+//             <div className="use_state_two">
+
+//                 <h2>{valueTwo}</h2>
+
+//                 <span onClick={toggleState}>✅</span>
+
+//             </div>
+
+//         </>
+
+//     )
+
+// }

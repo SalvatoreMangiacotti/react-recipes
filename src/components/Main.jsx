@@ -26,8 +26,6 @@ export default function Main() {
 
         products.push(newIngredient)
 
-        console.log(products)
-
     }
 
 

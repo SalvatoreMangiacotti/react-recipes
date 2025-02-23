@@ -10,7 +10,7 @@ import Main from './components/Main'
 
 // UseState Practice
 
-import UseState from './components/UseState'
+// import UseState from './components/UseState'
 
 
 // Css
@@ -28,7 +28,7 @@ function App() {
 
       <Main />
 
-      <UseState />
+      {/* <UseState /> */}
 
     </>
 
