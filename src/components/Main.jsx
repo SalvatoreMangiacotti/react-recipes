@@ -1,3 +1,4 @@
+import { useState } from "react";
 import products from "../data/productList"
 
 export default function Main() {
@@ -16,28 +17,19 @@ export default function Main() {
     // }
 
 
+    const [ingredients, setIngredients] = useState(products)
+
+
     const handleSubmit = (event) => {
 
         event.preventDefault();
 
-        const formData = new FormData(event.currentTarget)
+        setIngredients(prevValue => [...prevValue, newIngredient])
 
+        const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
 
-        products.push(newIngredient)
-
     }
-
-
-    const productsList = products.map((element) => {
-
-        return (
-
-            <li key={element}>{element}</li>
-
-        )
-
-    })
 
 
     return (
@@ -76,7 +68,15 @@ export default function Main() {
 
                 <ol>
 
-                    {productsList}
+                    {ingredients.map((element) => {
+
+                        return (
+
+                            <li key={element}>{element}</li>
+
+                        )
+
+                    })}
 
                 </ol>
 
