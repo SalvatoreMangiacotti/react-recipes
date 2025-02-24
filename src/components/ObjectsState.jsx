@@ -1,4 +1,4 @@
-import { use, useState } from "react"
+import { useState } from "react"
 
 export default function ObjectsState() {
 
@@ -22,7 +22,7 @@ export default function ObjectsState() {
 
     const [user, setUser] = useState(userData)
 
-    const [icon, setIcon] = useState('🌑')
+    const [icon, setIcon] = useState('🦕')
 
 
     // Toggle Function
@@ -33,40 +33,36 @@ export default function ObjectsState() {
 
             ...previousValue,
 
-            isReal: !previousValue
+            isReal: !previousValue.isReal
 
         })
 
-        setIcon(previousIcon => previousIcon === '🌑' ? '🌞' : '🌑')
+        setIcon(previousIcon => previousIcon === '🦕' ? '🦖' : '🦕')
 
     }
 
 
     return (
 
-        <>
+        <div className="user_card">
 
-            <div className="user_card">
+            <span
 
-                <span
+                onClick={toggleFavorite}
 
-                    onClick={toggleFavorite}
+                alt="icon"
 
-                    alt="moon icon"
+                className="dinosaur_icon"
 
-                    className="isreal"
+            >{icon}</span>
 
-                >{icon}</span>
+            <h3>{user.firstName}</h3>
 
-                <h3>{user.firstName}</h3>
+            <h3>{user.lastName}</h3>
 
-                <h3>{user.lastName}</h3>
+            <span>{user.email}</span>
 
-                <span>{user.email}</span>
-
-            </div>
-
-        </>
+        </div>
 
     )
 
