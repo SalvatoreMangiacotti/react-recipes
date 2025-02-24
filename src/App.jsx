@@ -18,6 +18,11 @@ import Main from './components/Main'
 // import ManageArrays from './components/ManageArrays'
 
 
+// ObjectsState Practice
+
+import ObjectsState from './components/ObjectsState'
+
+
 // Css
 
 import './App.css'
@@ -36,6 +41,8 @@ function App() {
       {/* <UseState /> */}
 
       {/* <ManageArrays /> */}
+
+      <ObjectsState />
 
     </>
 
