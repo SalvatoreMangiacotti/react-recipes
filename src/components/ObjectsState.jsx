@@ -1,69 +1,69 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export default function ObjectsState() {
-
-
-    // User Object Data
-
-    const userData = {
-
-        firstName: "Fred",
-
-        lastName: "Flintstone",
-
-        email: 'fred@flintstone.stoneage',
-
-        isReal: false
-
-    }
+// export default function ObjectsState() {
 
 
-    // useState
+//     // User Object Data
 
-    const [user, setUser] = useState(userData)
+//     const userData = {
 
-    const [icon, setIcon] = useState('🦕')
+//         firstName: "Fred",
 
+//         lastName: "Flintstone",
 
-    // Toggle Function
+//         email: 'fred@flintstone.stoneage',
 
-    function toggleFavorite() {
+//         isReal: false
 
-        setUser(previousValue => previousValue = {
-
-            ...previousValue,
-
-            isReal: !previousValue.isReal
-
-        })
-
-        setIcon(previousIcon => previousIcon === '🦕' ? '🦖' : '🦕')
-
-    }
+//     }
 
 
-    return (
+//     // useState
 
-        <div className="user_card">
+//     const [user, setUser] = useState(userData)
 
-            <span
+//     const [icon, setIcon] = useState('🦕')
 
-                onClick={toggleFavorite}
 
-                alt="icon"
+//     // Toggle Function
 
-                className="dinosaur_icon"
+//     function toggleFavorite() {
 
-            >{icon}</span>
+//         setUser(previousValue => previousValue = {
 
-            <h3>{user.firstName}</h3>
+//             ...previousValue,
 
-            <h3>{user.lastName}</h3>
+//             isReal: !previousValue.isReal
 
-            <span>{user.email}</span>
+//         })
 
-        </div>
+//         setIcon(previousIcon => previousIcon === '🦕' ? '🦖' : '🦕')
 
-    )
+//     }
 
-}
+
+//     return (
+
+//         <div className="user_card">
+
+//             <span
+
+//                 onClick={toggleFavorite}
+
+//                 alt="icon"
+
+//                 className="dinosaur_icon"
+
+//             >{icon}</span>
+
+//             <h3>{user.firstName}</h3>
+
+//             <h3>{user.lastName}</h3>
+
+//             <span>{user.email}</span>
+
+//         </div>
+
+//     )
+
+// }

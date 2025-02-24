@@ -20,7 +20,7 @@ import Main from './components/Main'
 
 // ObjectsState Practice
 
-import ObjectsState from './components/ObjectsState'
+// import ObjectsState from './components/ObjectsState'
 
 
 // Css
@@ -42,7 +42,7 @@ function App() {
 
       {/* <ManageArrays /> */}
 
-      <ObjectsState />
+      {/* <ObjectsState /> */}
 
     </>
 
